@@ -1,0 +1,74 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("hola a todos");
+           // Console.ReadLine();
+            int dado = 4;
+            string mensaje;
+            string mensaje2 = "Por favor ingresa un numero de 1 a 10 ";
+            Console.WriteLine(mensaje2);
+            string valor = Console.ReadLine();
+            dado = int.Parse(valor);
+
+            if (dado == 1)
+            {
+                 mensaje = "Te ganaste un auto";
+            
+            } else if (dado == 6 || dado == 8)
+
+            {
+               mensaje = "Te ganaste un moto";
+              
+            } else if (dado > 2 && dado < 5)
+
+            {
+                mensaje = "Te ganaste un perro";
+
+            } else
+
+            {
+                mensaje = "Segui Participando";
+               
+            }
+
+            Console.WriteLine(mensaje);
+
+            Console.Write("Tu dado fue " + valor + " y ganaste un " + mensaje );
+
+            Console.WriteLine();
+
+            Console.Write($"Tu dado fue {dado} y te ganaste {mensaje}" );
+
+            Console.WriteLine();
+
+
+            ///////////////////////////////////////////////////////////////
+
+            string mensaje3 = "Ingrese un numero";
+            int acu=0;
+
+
+            for (int posicion = 10; posicion < 20; posicion++)
+            {
+                Console.WriteLine(mensaje3);
+                string valor2 = Console.ReadLine();
+                int numero = int.Parse(valor2);
+                acu = acu + numero;
+
+                if (acu > 50)
+                {
+                    Console.WriteLine("el total sumado fue " + acu);
+                    break;
+                }
+            }
+
+
+
+        }
+    }
+}
